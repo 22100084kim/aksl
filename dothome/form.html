@@ -1,10 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <title>Page Title</title>
 </head>
 <body>
-$END$
+
+<h1>Form</h1>
+<p>사용자 정보 입력</p>
+
+<form action="form_ok.php" method="post">
+    <lable for="fname"><span>*</span>이름:</lable>
+    <input type="text" id="uname" name="uname" required><br>
+
+    <lable for="pwd"><span>*</span>비밀번호:</lable>
+    <input type="password" id="pwd" name="pwd"placeholder='4자 이상 입력' required><br>
+
+    <lable for="mobile">핸드폰번호:</lable>
+    <input type="text" id="mobile" name="mobile"placeholder="00*-000*-0000" patten="[0-9]{2,3}-[0-9]{3,4}-[0-9]{3,4}" maxlength="13"><br>
+
+    <lable for="gender1">성별:</lable>
+    <input type="radio" id="gender1" name="gender" value="M" checked>남 <input type="radio" id="radio" name= "gender" value="w">여 <br>
+
+    <lable for="hobby1">취미:</lable>
+
+    <input type="checkbox" id="hobby1" name="hobby1" value="영화감상" checked>영화감상
+    <input type="checkbox" id="hobby2" name="hobby2" value="독서" >독서
+    <input type="checkbox" id="hobby3" name="hobby3" value="스포츠" >스포츠 <br>
+
+    지역선택 : <select name="city">
+    <optgroup label="서울">
+        <option value="강남구">강남구</option>
+        <option value="서초구">서초구</option>
+        <option value="송파구">송파구</option>
+    </optgroup>
+    <optgroup label="경기도">
+        <option value="성남시">성남시</option>
+        <option value="수원시">수원시</option>
+        <option value="용인시">용인시</option>
+    </optgroup>
+</select>
+    <br>
+
+
+
+    제목 : <input type='text' name='subject'><br>
+    내용 :<br>
+    <textarea name='content' cols=40 rows=5></textarea>
+    <br>
+
+    날짜 : <input type='date' min='2019-01-01' max='2020-12-31' name='fromdate'>
+    <br>
+    색상 : <input type='color' name='color' value='#ff0000'>
+    <br>
+    <br>
+
+    <input type="submit" value="저장"> <input type="reset" value="새로입력">
+
+</form>
 </body>
 </html>
+
+
